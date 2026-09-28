@@ -259,20 +259,27 @@ def check_binary_types(files, findings):
 
 
 def run_claude_validate(root, findings):
-    try:
-        proc = subprocess.run(["claude", "plugin", "validate", str(root)], text=True, capture_output=True, timeout=90)
-    except FileNotFoundError:
-        add(findings, "NOTE", "claude-missing", "Claude Code is not installed; skipped official local schema validation.", root)
-        return None
-    except subprocess.TimeoutExpired:
-        add(findings, "WARN", "claude-timeout", "Claude Code validation timed out after 90 seconds.", root)
-        return None
-    output = (proc.stdout + "\n" + proc.stderr).strip()
-    if proc.returncode == 0:
-        add(findings, "NOTE", "claude-validation-pass", "Claude Code plugin validation passed.", root)
-    else:
-        add(findings, "BLOCK", "claude-validation-fail", "Claude Code plugin validation failed: " + output[:1200], root)
-    return {"returncode": proc.returncode, "output": output}
+    targets = [("plugin", root / ".claude-plugin" / "plugin.json")]
+    marketplace = root / ".claude-plugin" / "marketplace.json"
+    if marketplace.exists():
+        targets.append(("marketplace", marketplace))
+    results = []
+    for label, target in targets:
+        try:
+            proc = subprocess.run(["claude", "plugin", "validate", str(target)], text=True, capture_output=True, timeout=90)
+        except FileNotFoundError:
+            add(findings, "NOTE", "claude-missing", "Claude Code is not installed; skipped official local schema validation.", root)
+            return None
+        except subprocess.TimeoutExpired:
+            add(findings, "WARN", "claude-timeout", f"Claude Code {label} validation timed out after 90 seconds.", target)
+            continue
+        output = (proc.stdout + "\n" + proc.stderr).strip()
+        results.append({"target": label, "path": str(target), "returncode": proc.returncode, "output": output})
+        if proc.returncode == 0:
+            add(findings, "NOTE", f"claude-{label}-validation-pass", f"Claude Code {label} validation passed.", target)
+        else:
+            add(findings, "BLOCK", f"claude-{label}-validation-fail", f"Claude Code {label} validation failed: " + output[:1200], target)
+    return {"returncode": max((item["returncode"] for item in results), default=0), "output": "\n\n".join(item["output"] for item in results), "results": results}
 
 def summarize(findings):
     levels = {"BLOCK": 0, "HOLD": 0, "WARN": 0, "NOTE": 0}

@@ -15,6 +15,21 @@ The scanner runs locally, uses only the Python standard library, and makes no ne
 - package-launcher version pinning
 - likely accidentally committed credential strings
 
+## Install as a Claude plugin
+
+Add the PlugShip marketplace from GitHub, then install the plugin:
+
+```bash
+claude plugin marketplace add williamleewilliam1-star/plugship-preflight
+claude plugin install plugship-preflight@plugship-tools
+```
+
+For a one-session test without installing, use the packaged release directly:
+
+```bash
+claude --plugin-url https://github.com/williamleewilliam1-star/plugship-preflight/releases/download/v1.1.3/plugship-preflight-v1.1.3.zip
+```
+
 ## Use
 
 Run the deterministic scanner directly:
