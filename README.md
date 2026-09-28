@@ -84,6 +84,16 @@ The scanner is suitable as the deterministic first stage of a paid plugin-portab
 
 PlugShip is local-first: the scanner does not make network requests or retain repository contents. See [PRIVACY.md](./PRIVACY.md) for the complete data-handling policy.
 
-## Paid audit option
+## Plans
 
-Want a reviewed submission package instead of a self-serve scan? See [SERVICES.md](./SERVICES.md) for the €39 Quick Audit and €89 Audit + Fix Pack, with live Stripe checkout links.
+The core PlugShip local plugin remains free and open source.
+
+- **Free — €0:** local scanner, Claude validation, OpenAI portability report, public marketplace install.
+- **Pro — €4.90/month (Early Access):** Free plus priority rule updates, subscriber release notes, priority support, and early access to hosted/batch features as they ship. Subscribe: https://buy.stripe.com/9B6dR2bbA8Q0fJJbn2aZi02
+- **Studio — €9.90/month (Early Access):** Pro plus higher-priority support, priority feedback on complex reports, and early access to private-repo/team/bulk workflow features as they ship. Subscribe: https://buy.stripe.com/5kQdR27Zod6g2WX2QwaZi03
+
+Manage or cancel a subscription: https://billing.stripe.com/p/login/28E8wI2F44zK699gHmaZi00
+
+## Premium human service
+
+Want a reviewed submission package instead of a self-serve scan? See [SERVICES.md](./SERVICES.md) for the separate €39 Quick Audit and €89 Audit + Fix Pack.

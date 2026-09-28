@@ -24,22 +24,23 @@
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
     .card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted)}
+    .card ul{padding-left:18px;margin:16px 0 0;color:var(--muted)}.card li{margin:7px 0}.plan-note{font-size:13px;color:var(--muted);margin-top:12px!important}
     pre{white-space:pre-wrap;word-break:break-word;background:#191916;color:#f6f2e8;border-radius:14px;padding:20px;overflow:auto}
-    .price{font-size:40px;font-weight:760;letter-spacing:-.04em}
+    .price{font-size:40px;font-weight:760;letter-spacing:-.04em}.price small{font-size:14px;font-weight:600;letter-spacing:0;color:var(--muted)}
     .small{font-size:14px;color:var(--muted)} footer{padding:36px 0 16px;color:var(--muted);display:flex;justify-content:space-between;gap:18px}
     @media(max-width:760px){.hero,.grid{grid-template-columns:1fr}.metric{border-left:0;padding-left:0}.navlinks{display:none}}
   </style>
 </head>
 <body>
 <div class="wrap">
-  <nav><div class="brand">PLUGSHIP</div><div class="navlinks"><a href="#install">Install</a><a href="#audit">Audit</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></nav>
+  <nav><div class="brand">PLUGSHIP</div><div class="navlinks"><a href="#install">Install</a><a href="#pricing">Pricing</a><a href="#human">Human service</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></nav>
   <main>
     <div class="hero">
       <div>
         <span class="pill">Local-first · Open source · MIT</span>
         <h1>Ship Claude plugins without blind spots.</h1>
         <p class="lead">PlugShip Preflight checks plugin structure, manifests, documentation, privacy metadata, file hygiene, MCP and skill configuration, credential-like literals, and Claude’s local validator before directory review.</p>
-        <div class="cta"><a class="btn primary" href="https://github.com/williamleewilliam1-star/plugship-preflight">View on GitHub</a><a class="btn" href="#audit">Get an audit</a></div>
+        <div class="cta"><a class="btn primary" href="#install">Install Free</a><a class="btn" href="#pricing">Compare plans</a></div>
       </div>
       <div class="metric"><strong>0 / 0 / 0</strong><span>BLOCK · HOLD · WARN on the current self-test</span></div>
     </div>
@@ -57,18 +58,27 @@ claude plugin install plugship-preflight@plugship-tools</pre>
         <div class="card"><h3>Official validation</h3><p>Runs Claude Code validation against the plugin manifest and marketplace manifest independently.</p></div>
       </div>
     </section>
-    <section id="audit">
-      <h2>Need a reviewed package?</h2>
+    <section id="pricing">
+      <h2>Start free. Upgrade only when you want more.</h2>
       <div class="grid">
-        <div class="card"><div class="price">€39</div><h3>Quick Audit</h3><p>One public repository. Deterministic scan, local Claude validation, metadata/privacy review and prioritized fix list.</p><p style="margin-top:18px"><a class="btn primary" href="https://buy.stripe.com/28E8wI2F44zK699gHmaZi00">Pay €39</a></p></div>
-        <div class="card"><div class="price">€89</div><h3>Audit + Fix Pack</h3><p>Quick Audit plus supported mechanical fixes, documentation cleanup, re-validation and final readiness report.</p><p style="margin-top:18px"><a class="btn primary" href="https://buy.stripe.com/7sY4gscfE8Q01STgHmaZi01">Pay €89</a></p></div>
-        <div class="card"><h3>After payment</h3><p>Open the audit request form and include the public repository URL plus the email used at checkout. For a private repository, DM <a href="https://x.com/babqd777">@babqd777</a>.</p><p style="margin-top:16px"><a class="btn" href="https://github.com/williamleewilliam1-star/plugship-preflight/issues/new?template=audit-request.md">Send repository</a></p></div>
+        <div class="card"><span class="pill">Free forever</span><div class="price">€0</div><h3>PlugShip Free</h3><p>The core local tool stays free and open source.</p><ul><li>Local preflight scanner</li><li>Claude local validation</li><li>OpenAI portability report</li><li>Public GitHub marketplace install</li></ul><p style="margin-top:18px"><a class="btn primary" href="#install">Install Free</a></p></div>
+        <div class="card"><span class="pill">Early Access</span><div class="price">€4.90 <small>/ month</small></div><h3>PlugShip Pro</h3><p>For builders who want faster updates and closer support.</p><ul><li>Everything in Free</li><li>Priority rule updates</li><li>Subscriber release notes</li><li>Priority support</li><li>Early access to hosted and batch features as they ship</li></ul><p style="margin-top:18px"><a class="btn primary" href="https://buy.stripe.com/9B6dR2bbA8Q0fJJbn2aZi02">Subscribe Pro</a></p><p class="plan-note">Core local features remain free even if you cancel.</p></div>
+        <div class="card"><span class="pill">Early Access</span><div class="price">€9.90 <small>/ month</small></div><h3>PlugShip Studio</h3><p>For heavier workflows and teams preparing multiple plugins.</p><ul><li>Everything in Pro</li><li>Higher-priority support</li><li>Priority feedback on complex reports</li><li>Early access to private-repo, team and bulk workflow features as they ship</li></ul><p style="margin-top:18px"><a class="btn primary" href="https://buy.stripe.com/5kQdR27Zod6g2WX2QwaZi03">Subscribe Studio</a></p><p class="plan-note">Early Access benefits may evolve as the cloud layer is built.</p></div>
+      </div>
+    </section>
+    <section id="human">
+      <h2>Need hands-on help?</h2>
+      <p class="lead">Subscriptions are for ongoing product access and early features. Human repository work remains a separate premium service.</p>
+      <div class="grid">
+        <div class="card"><div class="price">€39</div><h3>Quick Audit</h3><p>One public repository. Deterministic scan, local Claude validation, metadata/privacy review and prioritized fix list.</p><p style="margin-top:18px"><a class="btn" href="https://buy.stripe.com/28E8wI2F44zK699gHmaZi00">Buy audit</a></p></div>
+        <div class="card"><div class="price">€89</div><h3>Audit + Fix Pack</h3><p>Quick Audit plus supported mechanical fixes, documentation cleanup, re-validation and final readiness report.</p><p style="margin-top:18px"><a class="btn" href="https://buy.stripe.com/7sY4gscfE8Q01STgHmaZi01">Buy fix pack</a></p></div>
+        <div class="card"><h3>Already paid?</h3><p>Send the repository URL and the email used at checkout. For a private repository, contact @babqd777 on X.</p><p style="margin-top:16px"><a class="btn" href="https://github.com/williamleewilliam1-star/plugship-preflight/issues/new?template=audit-request.md">Send repository</a></p></div>
       </div>
     </section>
   </main>
   <footer>
     <span>PlugShip Preflight · Operated by Ivan Babydov / BABYDOV · 2026</span>
-    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="https://github.com/williamleewilliam1-star/plugship-preflight/issues">Support</a></span>
+    <span><a href="https://billing.stripe.com/p/login/28E8wI2F44zK699gHmaZi00">Manage subscription</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="https://github.com/williamleewilliam1-star/plugship-preflight/issues">Support</a></span>
   </footer>
 </div>
 </body>
