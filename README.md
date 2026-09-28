@@ -31,7 +31,7 @@ claude plugin install plugship-preflight@plugship-tools
 For a one-session test without installing, use the packaged release directly:
 
 ```bash
-claude --plugin-url https://github.com/williamleewilliam1-star/plugship-preflight/releases/download/v1.1.4/plugship-preflight-v1.1.4.zip
+claude --plugin-url https://github.com/williamleewilliam1-star/plugship-preflight/releases/download/v1.1.5/plugship-preflight-v1.1.5.zip
 ```
 
 ## Use

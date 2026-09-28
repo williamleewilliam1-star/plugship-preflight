@@ -32,7 +32,11 @@ def read_text(path):
 
 def iter_text_files(root):
     allowed = {".md", ".txt", ".json", ".yaml", ".yml", ".toml", ".py", ".js", ".mjs", ".cjs", ".ts", ".tsx", ".jsx", ".sh", ".css", ".html", ".xml"}
+    ignored_dirs = {".git", "dist", "__pycache__", ".plugship-report"}
     for p in root.rglob("*"):
+        rel_parts = p.relative_to(root).parts
+        if any(part in ignored_dirs for part in rel_parts):
+            continue
         if p.is_file() and (p.suffix.lower() in allowed or p.name in {"LICENSE", "Makefile", "Dockerfile"}):
             yield p
 
@@ -107,7 +111,10 @@ def inspect_components(root, findings):
         if "${user_config." in text and config_or_instruction:
             add(findings, "MIGRATE", "user-config", "Claude userConfig references need an OpenAI replacement: task input, OAuth/hosted storage, or documented local config.", p)
         if p.name == "SKILL.md" and re.search(r"\bClaude\b", text, flags=re.I):
-            add(findings, "REVIEW", "claude-wording", "Skill text mentions Claude; review whether the wording should become provider-neutral.", p)
+            if re.search(r"\bOpenAI\b", text, flags=re.I):
+                add(findings, "NOTE", "cross-provider-scope", "Skill intentionally references Claude and OpenAI because it covers cross-provider preflight and portability.", p)
+            else:
+                add(findings, "REVIEW", "claude-wording", "Skill text mentions Claude; review whether the wording should become provider-neutral.", p)
 
         for match in SENSITIVE_RE.finditer(text):
             value = match.group(2)

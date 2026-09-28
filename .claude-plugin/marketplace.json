@@ -12,7 +12,7 @@
       "name": "plugship-preflight",
       "source": "./",
       "description": "Preflight Claude plugins before directory submission: manifest, documentation, privacy metadata, file hygiene, MCP and skill checks, and local validation.",
-      "version": "1.1.4",
+      "version": "1.1.5",
       "author": {
         "name": "BABYDOV",
         "url": "https://github.com/williamleewilliam1-star"
