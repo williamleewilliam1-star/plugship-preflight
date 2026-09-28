@@ -60,3 +60,7 @@ The generated package uses the portable Agent Plugins `plugin.json` format. Comp
 ## Suggested commercial use
 
 The scanner is suitable as the deterministic first stage of a paid plugin-portability audit: scan the customer's repository, return the report, repair supported issues, build the portable package, then complete portal-only checks in the publisher's own verified account.
+
+## Privacy
+
+PlugShip is local-first: the scanner does not make network requests or retain repository contents. See [PRIVACY.md](./PRIVACY.md) for the complete data-handling policy.

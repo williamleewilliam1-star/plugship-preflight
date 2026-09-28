@@ -1,8 +1,11 @@
 {
   "name": "plugship-preflight",
   "displayName": "PlugShip Preflight",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Preflight plugin repositories before directory submission: manifest, documentation, file hygiene, connector configuration, and skill metadata.",
-  "author": {"name": "BABYDOV"},
-  "license": "MIT"
+  "author": {"name": "BABYDOV", "url": "https://github.com/williamleewilliam1-star"},
+  "homepage": "https://github.com/williamleewilliam1-star/plugship-preflight#readme",
+  "repository": "https://github.com/williamleewilliam1-star/plugship-preflight",
+  "license": "MIT",
+  "keywords": ["claude", "plugin", "preflight", "validation", "mcp"]
 }
