@@ -64,3 +64,7 @@ The scanner is suitable as the deterministic first stage of a paid plugin-portab
 ## Privacy
 
 PlugShip is local-first: the scanner does not make network requests or retain repository contents. See [PRIVACY.md](./PRIVACY.md) for the complete data-handling policy.
+
+## Paid audit option
+
+Want a reviewed submission package instead of a self-serve scan? See [SERVICES.md](./SERVICES.md) for the $39 Quick Audit and $89 Audit + Fix Pack. Requests are handled via DM at https://x.com/babqd777.
