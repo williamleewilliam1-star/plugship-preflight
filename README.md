@@ -1,5 +1,7 @@
 # PlugShip Preflight
 
+[![CI](https://github.com/williamleewilliam1-star/plugship-preflight/actions/workflows/ci.yml/badge.svg)](https://github.com/williamleewilliam1-star/plugship-preflight/actions/workflows/ci.yml)
+
 Website: https://williamleewilliam1-star.github.io/plugship-preflight/
 
 PlugShip Preflight checks a Claude plugin folder before submission to the Claude Plugin Directory. It combines a deterministic local scanner with an Agent Skill that explains findings and prepares safe fixes.
