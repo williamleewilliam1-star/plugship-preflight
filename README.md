@@ -1,5 +1,7 @@
 # PlugShip Preflight
 
+Website: https://williamleewilliam1-star.github.io/plugship-preflight/
+
 PlugShip Preflight checks a Claude plugin folder before submission to the Claude Plugin Directory. It combines a deterministic local scanner with an Agent Skill that explains findings and prepares safe fixes.
 
 The scanner runs locally, uses only the Python standard library, and makes no network requests. It reads the target plugin tree and reports likely blocking findings, reviewer holds, warnings, and notes. It does not upload, publish, modify, or transmit the target plugin unless the user explicitly asks an agent to edit files.
@@ -27,7 +29,7 @@ claude plugin install plugship-preflight@plugship-tools
 For a one-session test without installing, use the packaged release directly:
 
 ```bash
-claude --plugin-url https://github.com/williamleewilliam1-star/plugship-preflight/releases/download/v1.1.3/plugship-preflight-v1.1.3.zip
+claude --plugin-url https://github.com/williamleewilliam1-star/plugship-preflight/releases/download/v1.1.4/plugship-preflight-v1.1.4.zip
 ```
 
 ## Use

@@ -12,14 +12,20 @@
       "name": "plugship-preflight",
       "source": "./",
       "description": "Preflight Claude plugins before directory submission: manifest, documentation, privacy metadata, file hygiene, MCP and skill checks, and local validation.",
-      "version": "1.1.3",
+      "version": "1.1.4",
       "author": {
         "name": "BABYDOV",
         "url": "https://github.com/williamleewilliam1-star"
       },
       "category": "Development Engineering",
-      "homepage": "https://github.com/williamleewilliam1-star/plugship-preflight",
-      "keywords": ["claude", "plugin", "preflight", "validation", "mcp"]
+      "homepage": "https://williamleewilliam1-star.github.io/plugship-preflight/",
+      "keywords": [
+        "claude",
+        "plugin",
+        "preflight",
+        "validation",
+        "mcp"
+      ]
     }
   ]
 }

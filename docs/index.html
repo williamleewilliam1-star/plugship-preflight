@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PlugShip Preflight — Claude plugin submission checks</title>
+  <meta name="description" content="Local-first preflight checks for Claude plugins before directory review.">
+  <style>
+    :root{--bg:#f5f2ea;--ink:#171714;--muted:#67665e;--line:#d8d3c6;--panel:#fffdf7;--accent:#244a3b}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit} .wrap{max-width:1080px;margin:auto;padding:28px}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:8px 0 64px}
+    .brand{font-weight:750;letter-spacing:.08em}.navlinks{display:flex;gap:20px;font-size:14px}
+    .hero{display:grid;grid-template-columns:1.35fr .65fr;gap:48px;align-items:end;padding-bottom:72px}
+    h1{font-size:clamp(44px,7vw,82px);line-height:.96;letter-spacing:-.055em;margin:0 0 24px}
+    .lead{font-size:20px;max-width:700px;color:var(--muted)}
+    .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:13px;margin-bottom:18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-block;padding:12px 17px;border-radius:10px;text-decoration:none;border:1px solid var(--ink);font-weight:650}
+    .btn.primary{background:var(--ink);color:white}.metric{border-left:1px solid var(--line);padding-left:24px}
+    .metric strong{display:block;font-size:34px}.metric span{color:var(--muted)}
+    section{border-top:1px solid var(--line);padding:56px 0}
+    h2{font-size:34px;letter-spacing:-.035em;margin:0 0 22px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+    .card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted)}
+    pre{white-space:pre-wrap;word-break:break-word;background:#191916;color:#f6f2e8;border-radius:14px;padding:20px;overflow:auto}
+    .price{font-size:40px;font-weight:760;letter-spacing:-.04em}
+    .small{font-size:14px;color:var(--muted)} footer{padding:36px 0 16px;color:var(--muted);display:flex;justify-content:space-between;gap:18px}
+    @media(max-width:760px){.hero,.grid{grid-template-columns:1fr}.metric{border-left:0;padding-left:0}.navlinks{display:none}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav><div class="brand">PLUGSHIP</div><div class="navlinks"><a href="#install">Install</a><a href="#audit">Audit</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></nav>
+  <main>
+    <div class="hero">
+      <div>
+        <span class="pill">Local-first · Open source · MIT</span>
+        <h1>Ship Claude plugins without blind spots.</h1>
+        <p class="lead">PlugShip Preflight checks plugin structure, manifests, documentation, privacy metadata, file hygiene, MCP and skill configuration, credential-like literals, and Claude’s local validator before directory review.</p>
+        <div class="cta"><a class="btn primary" href="https://github.com/williamleewilliam1-star/plugship-preflight">View on GitHub</a><a class="btn" href="#audit">Get an audit</a></div>
+      </div>
+      <div class="metric"><strong>0 / 0 / 0</strong><span>BLOCK · HOLD · WARN on the current self-test</span></div>
+    </div>
+    <section id="install">
+      <h2>Install in two commands</h2>
+      <pre>claude plugin marketplace add williamleewilliam1-star/plugship-preflight
+claude plugin install plugship-preflight@plugship-tools</pre>
+      <p class="small">The public GitHub marketplace install path is tested from a clean HOME environment.</p>
+    </section>
+    <section>
+      <h2>What it catches</h2>
+      <div class="grid">
+        <div class="card"><h3>Submission blockers</h3><p>Manifest shape, README/license gaps, invalid paths, oversized files, symlinks and component naming.</p></div>
+        <div class="card"><h3>Plugin hygiene</h3><p>MCP configuration, skill frontmatter, launcher pinning, credential-like literals and directory metadata.</p></div>
+        <div class="card"><h3>Official validation</h3><p>Runs Claude Code validation against the plugin manifest and marketplace manifest independently.</p></div>
+      </div>
+    </section>
+    <section id="audit">
+      <h2>Need a reviewed package?</h2>
+      <div class="grid">
+        <div class="card"><div class="price">$39</div><h3>Quick Audit</h3><p>One public repository. Deterministic scan, local Claude validation, metadata/privacy review and prioritized fix list.</p></div>
+        <div class="card"><div class="price">$89</div><h3>Audit + Fix Pack</h3><p>Quick Audit plus supported mechanical fixes, documentation cleanup, re-validation and final readiness report.</p></div>
+        <div class="card"><h3>Request</h3><p>Open the GitHub audit request template or DM <a href="https://x.com/babqd777">@babqd777</a> with the repository URL.</p><p style="margin-top:16px"><a class="btn" href="https://github.com/williamleewilliam1-star/plugship-preflight/issues/new?template=audit-request.md">Request audit</a></p></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>PlugShip Preflight · BABYDOV · 2026</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="https://github.com/williamleewilliam1-star/plugship-preflight/issues">Support</a></span>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,14 +1,24 @@
 {
   "name": "plugship-preflight",
   "displayName": "PlugShip Preflight",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Preflight plugin repositories before directory submission: manifest, documentation, file hygiene, connector configuration, and skill metadata.",
-  "author": {"name": "BABYDOV", "url": "https://github.com/williamleewilliam1-star"},
-  "homepage": "https://github.com/williamleewilliam1-star/plugship-preflight#readme",
+  "author": {
+    "name": "BABYDOV",
+    "url": "https://github.com/williamleewilliam1-star"
+  },
+  "homepage": "https://williamleewilliam1-star.github.io/plugship-preflight/",
   "repository": "https://github.com/williamleewilliam1-star/plugship-preflight",
-  "privacyPolicyUrl": "https://github.com/williamleewilliam1-star/plugship-preflight/blob/main/PRIVACY.md",
+  "privacyPolicyUrl": "https://williamleewilliam1-star.github.io/plugship-preflight/privacy.html",
   "supportUrl": "https://github.com/williamleewilliam1-star/plugship-preflight/issues",
-  "documentationUrl": "https://github.com/williamleewilliam1-star/plugship-preflight#readme",
+  "documentationUrl": "https://williamleewilliam1-star.github.io/plugship-preflight/#install",
   "license": "MIT",
-  "keywords": ["claude", "plugin", "preflight", "validation", "mcp"]
+  "keywords": [
+    "claude",
+    "plugin",
+    "preflight",
+    "validation",
+    "mcp"
+  ],
+  "termsOfServiceUrl": "https://williamleewilliam1-star.github.io/plugship-preflight/terms.html"
 }
