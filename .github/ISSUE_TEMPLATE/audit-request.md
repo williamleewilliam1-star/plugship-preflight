@@ -8,8 +8,8 @@ assignees: []
 
 ## Package
 
-- [ ] Quick Audit — $39
-- [ ] Audit + Fix Pack — $89
+- [ ] Quick Audit — €39
+- [ ] Audit + Fix Pack — €89
 
 ## Public repository URL
 

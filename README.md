@@ -86,4 +86,4 @@ PlugShip is local-first: the scanner does not make network requests or retain re
 
 ## Paid audit option
 
-Want a reviewed submission package instead of a self-serve scan? See [SERVICES.md](./SERVICES.md) for the $39 Quick Audit and $89 Audit + Fix Pack. Requests are handled via DM at https://x.com/babqd777.
+Want a reviewed submission package instead of a self-serve scan? See [SERVICES.md](./SERVICES.md) for the €39 Quick Audit and €89 Audit + Fix Pack, with live Stripe checkout links.
