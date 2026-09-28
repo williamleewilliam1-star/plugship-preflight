@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "plugship-preflight",
+  "version": "1.1.0",
+  "description": "Preflight Claude plugins and prepare skills-only packages for OpenAI plugin submission.",
+  "author": {"name": "BABYDOV"},
+  "license": "MIT",
+  "keywords": ["plugins", "claude", "openai", "migration", "preflight"]
+}

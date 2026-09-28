@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.plugship-report/
+.DS_Store
+dist/

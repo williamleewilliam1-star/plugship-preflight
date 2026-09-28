@@ -1,0 +1,8 @@
+{
+  "name": "sample-good",
+  "displayName": "Sample Good",
+  "version": "1.0.0",
+  "description": "A valid fixture for PlugShip tests.",
+  "author": {"name": "Fixture"},
+  "license": "MIT"
+}
