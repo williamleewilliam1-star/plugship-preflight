@@ -1,7 +1,7 @@
 {
   "name": "plugship-preflight",
   "displayName": "PlugShip Preflight",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "Preflight plugin repositories before directory submission: manifest, documentation, file hygiene, connector configuration, and skill metadata.",
   "author": {
     "name": "BABYDOV",

@@ -31,7 +31,7 @@ claude plugin install plugship-preflight@plugship-tools
 For a one-session test without installing, use the packaged release directly:
 
 ```bash
-claude --plugin-url https://github.com/williamleewilliam1-star/plugship-preflight/releases/download/v1.1.5/plugship-preflight-v1.1.5.zip
+claude --plugin-url https://github.com/williamleewilliam1-star/plugship-preflight/releases/download/v1.2.0/plugship-preflight-v1.2.0.zip
 ```
 
 ## Use
@@ -50,6 +50,10 @@ python3 scripts/preflight.py /path/to/your/plugin --report-dir ./plugship-report
 
 If Claude Code is installed, add `--claude-validate` to run Anthropic's local schema validator after PlugShip's checks.
 
+## Cloud Beta
+
+Try the browser-based scanner at https://williamleewilliam1-star.github.io/plugship-preflight/cloud/ . It scans selected metadata/configuration files from a public GitHub repository directly in the browser, supports single-repository and batch modes, stores recent history in browser localStorage, and exports Markdown/JSON reports. The launch beta is open for testing; deeper source checks and official local Claude validation remain in the free local plugin.
+
 The bundled skill is for guided remediation. Ask Claude to use PlugShip Preflight on a plugin repository, review the generated findings, make only evidence-backed edits, rerun the scanner, and leave portal-only checks for the official developer portal.
 
 ## Scope and limitations
@@ -58,7 +62,7 @@ This project is a preflight aid, not Anthropic's validator and not a guarantee o
 
 ## Data handling
 
-PlugShip reads local files only. It does not send repository contents or scan results anywhere. The optional Claude Code validation subprocess is local. If you use an AI agent to apply fixes, that agent's own data-handling rules apply separately.
+The local PlugShip scanner reads local files and does not send repository contents or scan results to BABYDOV. The optional Claude Code validation subprocess is local. The Cloud Beta is separate: the user's browser requests selected files directly from public GitHub repositories, keeps recent scan summaries in browser localStorage, and does not proxy repository contents through a PlugShip application server. See [PRIVACY.md](./PRIVACY.md) for details.
 
 ## License
 

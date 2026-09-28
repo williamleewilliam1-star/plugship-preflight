@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "BABYDOV developer tools for Claude plugin validation and packaging.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "plugship-preflight",
       "source": "./",
       "description": "Preflight Claude plugins before directory submission: manifest, documentation, privacy metadata, file hygiene, MCP and skill checks, and local validation.",
-      "version": "1.1.5",
+      "version": "1.2.0",
       "author": {
         "name": "BABYDOV",
         "url": "https://github.com/williamleewilliam1-star"

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PlugShip Cloud — hosted plugin preflight</title>
+  <meta name="description" content="Scan a public Claude plugin repository in your browser before directory submission.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="../">PLUGSHIP</a>
+    <div class="navlinks">
+      <a href="#scanner">Scanner</a>
+      <a href="#batch-section">Batch</a>
+      <a href="../#pricing">Pricing</a>
+      <a href="https://github.com/williamleewilliam1-star/plugship-preflight">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <span class="eyebrow">Cloud beta · runs in your browser</span>
+      <h1>Preflight a plugin before review sees it.</h1>
+      <p>Paste a public GitHub repository. PlugShip reads selected plugin metadata and documentation directly from GitHub, checks the repository in your browser, and builds a downloadable report.</p>
+    </div>
+    <aside class="privacy-card">
+      <strong>No PlugShip upload server.</strong>
+      <p>Your public repository data goes from GitHub to your browser. Scan history is stored only in this browser. For deeper source checks, use the free local plugin.</p>
+    </aside>
+  </header>
+
+  <main id="scanner">
+    <div class="grid">
+      <section class="panel">
+        <div class="panel-head">
+          <div><h2>Single repository</h2><p>Fast hosted preflight for a public GitHub repository.</p></div>
+          <span class="tag">Cloud beta</span>
+        </div>
+        <form id="single-form">
+          <input id="repo" autocomplete="off" spellcheck="false" placeholder="github.com/owner/repository or owner/repository" aria-label="GitHub repository">
+          <button id="single-button" type="submit">Run cloud scan</button>
+        </form>
+      </section>
+
+      <section class="panel" id="batch-section">
+        <div class="panel-head">
+          <div><h2>Batch scanner</h2><p>Scan up to 10 public repositories sequentially.</p></div>
+          <span class="tag studio">Studio beta</span>
+        </div>
+        <form id="batch-form" class="batch-form">
+          <textarea id="batch" spellcheck="false" placeholder="owner/repo-one&#10;owner/repo-two&#10;owner/repo-three" aria-label="GitHub repositories"></textarea>
+          <button id="batch-button" type="submit">Run batch scan</button>
+        </form>
+      </section>
+    </div>
+
+    <div id="result" class="result-area"></div>
+    <div id="batch-results"></div>
+
+    <section class="section">
+      <h2>Browser-local history</h2>
+      <p>Recent scans are saved only in localStorage on this device.</p>
+      <div id="history" class="history-list"></div>
+    </section>
+
+    <section class="cta-strip">
+      <div>
+        <h2>Need deeper checks?</h2>
+        <p>The free local PlugShip plugin can run official local Claude validation and deeper repository checks without GitHub API limits.</p>
+      </div>
+      <a class="button" href="../#install">Install Free</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>PlugShip Cloud Beta · BABYDOV · 2026</span>
+    <span><a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="../#pricing">Plans</a></span>
+  </footer>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

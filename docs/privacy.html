@@ -4,13 +4,16 @@
 <style>body{max-width:780px;margin:0 auto;padding:48px 24px;background:#f5f2ea;color:#171714;font:16px/1.65 system-ui,sans-serif}a{color:inherit}h1{font-size:46px;letter-spacing:-.04em}h2{margin-top:34px}nav{margin-bottom:50px}</style></head>
 <body><nav><a href="./">← PlugShip Preflight</a></nav>
 <h1>Privacy Policy</h1>
-<p><strong>Effective September 28, 2026.</strong> PlugShip Preflight is a local developer tool for reviewing plugin repositories before directory submission.</p>
+<p><strong>Effective September 28, 2026.</strong> PlugShip Preflight includes a local developer tool and an optional browser-based Cloud Beta for reviewing public plugin repositories before directory submission.</p>
 <h2>Data processed</h2>
 <p>PlugShip reads files inside the plugin directory selected by the user. Those files may contain source code, documentation, configuration, and incidental personal information such as author names or email addresses.</p>
-<h2>Data transmission</h2>
-<p>The deterministic scanner makes no network requests and does not transmit repository contents or scan results to BABYDOV or third parties. If the optional Claude validation mode is used, PlugShip invokes the locally installed Claude Code validator; PlugShip itself adds no additional transmission.</p>
+<h2>Local scanner</h2>
+<p>The deterministic local scanner makes no network requests and does not transmit repository contents or scan results to BABYDOV. If optional Claude validation is used, PlugShip invokes the locally installed Claude Code validator; PlugShip itself adds no additional transmission.</p>
+<h2>Cloud Beta</h2>
+<p>The Cloud Beta accepts public GitHub repository URLs. Selected repository metadata, plugin configuration, Skills, README, and license files are requested directly from GitHub by the user's browser. PlugShip does not proxy those repository contents through a BABYDOV application server.</p>
+<p>Cloud Beta scan history is stored in the user's browser localStorage. Clearing browser site data removes that history. The current Cloud Beta does not provide server-side repository-history storage.</p>
 <h2>Storage and retention</h2>
-<p>PlugShip has no server-side database and does not retain user repository contents. Reports are written only to a local path selected by the user.</p>
+<p>The local scanner writes reports only to a local path selected by the user. The current Cloud Beta keeps recent scan summaries only in browser localStorage and does not maintain a PlugShip server-side repository database.</p>
 <h2>Credentials</h2>
 <p>PlugShip is designed to flag likely accidentally committed credentials. It does not intentionally collect, store, or transmit credentials.</p>
 <h2>Children</h2>
