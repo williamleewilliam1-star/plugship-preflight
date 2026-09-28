@@ -6,6 +6,9 @@
   "author": {"name": "BABYDOV", "url": "https://github.com/williamleewilliam1-star"},
   "homepage": "https://github.com/williamleewilliam1-star/plugship-preflight#readme",
   "repository": "https://github.com/williamleewilliam1-star/plugship-preflight",
+  "privacyPolicyUrl": "https://github.com/williamleewilliam1-star/plugship-preflight/blob/main/PRIVACY.md",
+  "supportUrl": "https://github.com/williamleewilliam1-star/plugship-preflight/issues",
+  "documentationUrl": "https://github.com/williamleewilliam1-star/plugship-preflight#readme",
   "license": "MIT",
   "keywords": ["claude", "plugin", "preflight", "validation", "mcp"]
 }
