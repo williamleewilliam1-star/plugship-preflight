@@ -325,6 +325,7 @@ def main():
     check_components(root, findings)
     check_binary_types(files, findings)
     check_launchers(files, findings)
+    check_sensitive_literals(files, findings)
     claude_result = run_claude_validate(root, findings) if args.claude_validate else None
 
     payload = {
